@@ -16,7 +16,11 @@
           <% @pins.each do |pin| %>
             <tr>
               <td><%= pin.description %></td>
-              <td class="col-md-2"><%= link_to 'Show', pin, class: 'btn btn-default btn-xs' %> <%= link_to 'Edit', edit_pin_path(pin), class: 'btn btn-warning btn-xs' %> <%= link_to 'Destroy', pin, class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td class="col-md-2">
+                <% if pin.user == current_user %>
+                  <%= link_to 'Show', pin, class: 'btn btn-default btn-xs' %> <%= link_to 'Edit', edit_pin_path(pin), class: 'btn btn-warning btn-xs' %> <%= link_to 'Destroy', pin, class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Are you sure?' } %>
+                <% end %>
+              </td>
             </tr>
           <% end %>
         </tbody>
