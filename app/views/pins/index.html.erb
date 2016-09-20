@@ -15,7 +15,8 @@
         <tbody>
           <% @pins.each do |pin| %>
             <tr>
-              <td><%= pin.description %></td>
+              <td><%= link_to (image_tag pin.image.url(:thumb)), pin %></td>
+              <td><%= link_to (pin.description), pin %></td>
               <td class="col-md-2">
                 <% if pin.user == current_user %>
                   <%= link_to 'Show', pin, class: 'btn btn-default btn-xs' %> <%= link_to 'Edit', edit_pin_path(pin), class: 'btn btn-warning btn-xs' %> <%= link_to 'Destroy', pin, class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Are you sure?' } %>
