@@ -16,8 +16,8 @@ class PinsController < ApplicationController
 
   # GET /pins/new
   def new
-    @pin = Pin.new
-    #@pin = current_user.pins.build
+    #pin = Pin.new
+    @pin = current_user.pins.build
   end
 
   # GET /pins/1/edit
