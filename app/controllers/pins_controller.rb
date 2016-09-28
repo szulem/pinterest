@@ -55,8 +55,6 @@ class PinsController < ApplicationController
     end
   end
 
-  # DELETE /pins/1
-  # DELETE /pins/1.json
   def destroy
     @pin.destroy
     respond_to do |format|
@@ -66,18 +64,16 @@ class PinsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_pin
       @pin = Pin.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def pin_params
       params.require(:pin).permit(:description, :image)
     end
     
     def correct_user
       @pin = current_user.pins.find_by(id: params[:id])
-      redirect_to pins_path, notice: "Możesz edytować tylko swoje piny, a ten pin nie należy do Ciebie." if @pin.nil?
+      redirect_to pins_path, notice: "You can edit only your pins." if @pin.nil?
     end
 end
