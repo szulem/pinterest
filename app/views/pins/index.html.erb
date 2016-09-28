@@ -8,7 +8,7 @@
         </div>
           <% if pin.user == current_user %>
             <div class="panel-footer">
-              <%= link_to 'Edit', edit_pin_path(pin), class: 'btn btn-warning btn-xs' %> <%= link_to 'Destroy', pin, class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Czy jesteś pewien?' } %>
+              <%= link_to 'Edytuj', edit_pin_path(pin), class: 'btn btn-warning btn-xs' %> <%= link_to 'Usuń', pin, class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Czy jesteś pewien?' } %>
             </div>
           <% end %>
       </div>
