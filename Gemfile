@@ -10,8 +10,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'devise', '~> 4.2'
+###### Poniższe dwa gemy służą do konfiguracji usługi Amazon S3
 gem 'paperclip', '~> 4.2.1'
 gem 'aws-sdk', '< 2.0'
+######
+gem 'jquery-turbolinks'
+gem 'masonry-rails', '~> 0.2.4'
 
 group :development, :test do
   gem 'sqlite3'
