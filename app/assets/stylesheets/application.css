@@ -14,3 +14,7 @@
  *= require_tree .
  *= require_self
  */
+ 
+ .panel-footer.panel-custom {
+    text-align: center;
+}
