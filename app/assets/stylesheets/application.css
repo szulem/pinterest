@@ -15,6 +15,10 @@
  *= require_self
  */
  
- .panel-footer.panel-custom {
-    text-align: center;
+.panel-footer.panel-custom {
+  text-align: center;
+}
+
+.navbar-brand {
+  font-weight: bold;
 }
