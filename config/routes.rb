@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'pins#index'
   get '/about' => 'home#about'
   get '/project' => 'home#project'
+  get '/mypins' => 'pins#mypins'
 end

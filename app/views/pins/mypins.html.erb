@@ -1,0 +1,5 @@
+  <%= render 'pinlist' %>
+
+  <% if @pins.empty? %>
+    <p>Nie dodałeś jeszcze żadnego pinu. Możesz to zrobić teraz - <%= link_to 'Dodaj pin', new_pin_path %>.</p>
+  <% end %>
