@@ -20,7 +20,6 @@
       <ul class="nav navbar-nav navbar-right">
           <li><%= link_to 'Strona główna', root_path %></li>
           <li><%= link_to 'O mnie', about_path %></li>
-          <li><%= link_to 'Lista pinów', pins_path %></li>
         
         <% if user_signed_in? %>
           <li><%= link_to '+ Dodaj pin', new_pin_path %></li>
