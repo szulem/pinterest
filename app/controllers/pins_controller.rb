@@ -10,12 +10,20 @@ class PinsController < ApplicationController
   end
   
   def mypins
+    @pins = current_user.pins.order("created_at DESC")
+  end
+  
+  def userpin
     @pins = current_user.pins
+    @users = User.all
+    @user = User.find(params[:user])
+    @pin = @user.pins
   end
 
   # GET /pins/1
   # GET /pins/1.json
   def show
+    
   end
 
   # GET /pins/new

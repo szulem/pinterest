@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/about' => 'home#about'
   get '/project' => 'home#project'
   get '/mypins' => 'pins#mypins'
+  #get '/userpin' => 'pins#userpin'
+  get '/userpin/:user' => 'pins#userpin', as: :user_pins
 end
