@@ -1,5 +1,5 @@
 class PinsController < ApplicationController
-  before_action :set_pin, only: [:show, :edit, :update, :destroy]
+  before_action :set_pin, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
 
@@ -74,6 +74,20 @@ class PinsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  #upvote from user
+  def upvote
+    @pin.upvote_from current_user
+    redirect_to :back
+  end
+  
+  #downvote from user
+  def downvote
+    @pin.downvote_from current_user
+    redirect_to :back
+  end
+  
+  
 
   private
     def set_pin
@@ -81,7 +95,7 @@ class PinsController < ApplicationController
     end
 
     def pin_params
-      params.require(:pin).permit(:description, :image)
+      params.require(:pin).permit(:description, :image, :name)
     end
     
     def correct_user

@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
-  resources :pins
+  resources :pins do
+    member do
+      put "like" => "pins#upvote"
+      put "unlike" => "pins#downvote"
+    end
+  end
+  
   devise_for :users
+  
   root 'pins#index'
+  
   get '/about' => 'home#about'
   get '/project' => 'home#project'
   get '/mypins' => 'pins#mypins'

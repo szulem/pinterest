@@ -4,6 +4,21 @@
     <p>
       <%= image_tag @pin.image.url(:medium) %>
     </p>
+    
+    <p>
+      <% if user_signed_in? %>
+        <%= link_to like_pin_path(@pin), method: :put do %>
+            <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center"></span>
+            <%= @pin.get_upvotes.size %>
+        <% end %>
+        &nbsp;
+        <%= link_to unlike_pin_path(@pin), method: :put do %>
+            <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center"></span>
+            <%= @pin.get_downvotes.size %>
+        <% end %>
+      <% end %>
+    </p>
+    
   </div>
   <div class="panel-footer">
     <% if @pin.user == current_user %>

@@ -16,6 +16,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'will_paginate', '~> 3.1', '>= 3.1.3'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
+gem 'acts_as_votable', '~> 0.10.0'
 
 
 group :development, :test do
