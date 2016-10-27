@@ -22,7 +22,7 @@
   </div>
   <div class="panel-footer">
     <% if @pin.user == current_user %>
-      <%= link_to 'Edytuj', edit_pin_path(@pin) %> |
+      <%= link_to 'Edytuj', edit_pin_path(@pin) %> | <%= link_to 'Usuń', @pin, method: :delete, data: { confirm: 'Czy jesteś pewien?' } %> | 
     <% end %>
     <%= link_to 'Wróć', pins_path %>
   </div>

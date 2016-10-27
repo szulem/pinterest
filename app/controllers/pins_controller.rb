@@ -14,6 +14,7 @@ class PinsController < ApplicationController
   end
   
   def userpin
+    #@pins = current_user.pins
     @users = User.all
     @user = User.find(params[:user])
     @pin = @user.pins
