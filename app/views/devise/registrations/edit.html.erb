@@ -43,5 +43,5 @@
       <% end %>
 
     </div>
-  <div class="panel-footer"><%= link_to "Back", :back %> | Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></div>
+  <div class="panel-footer"><%= link_to "Back", :back %> | Ostatnie logowanie: <%= @user.last_sign_in_at %> | Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></div>
 </div>
