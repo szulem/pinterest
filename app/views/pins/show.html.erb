@@ -20,7 +20,7 @@
     </p>
     
     <p>
-      <b>Dodał:</b> <%= link_to @pin.user.name, user_pins_path(user: @pin.user), title: "Wszystkie piny użytkownika #{@pin.user.name}" %><br />
+      <b>Autor:</b> <%= link_to @pin.user.name, user_pins_path(user: @pin.user), title: "Wszystkie piny użytkownika #{@pin.user.name}" %><br />
       <b>Data:</b> <%= @pin.created_at %><br />
       
       <% if @pin.created_at != @pin.updated_at %>
