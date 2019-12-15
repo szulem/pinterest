@@ -8,7 +8,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-gem 'devise', '~> 4.2'
+gem 'devise', '~> 4.7'
 ###### Poniższe dwa gemy służą do konfiguracji usługi Amazon S3
 gem 'paperclip', '~> 4.2.1'
 gem 'aws-sdk', '< 2.0'
